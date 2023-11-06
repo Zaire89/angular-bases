@@ -1,0 +1,23 @@
+<h3>listado HEROES</h3>
+
+<div *ngIf="delet; else templateRef" >
+<h2> Héroe Borrado: <small> {{delet}} </small></h2>
+</div>
+
+<!-- se le asigna nombre d referencia q se puso en el If -->
+<ng-template #templateRef>
+<h2 *ngIf="!delet"> No ha borrado nada </h2>
+</ng-template>
+
+<button
+*ngIf="heroName.length > 0"
+  (click)="removeLast()">
+  BORRAR Último
+</button>
+
+<ul>
+  <li *ngFor="let name of heroName"
+     class="list-group-item">
+     {{name}}
+  </li>
+</ul>

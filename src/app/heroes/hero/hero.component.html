@@ -1,0 +1,29 @@
+<h1>Qué será esto?</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd> {{name}}</dd>
+
+  <td>Edad:</td>
+  <dd> {{age}}</dd>
+
+  <td>Método:</td>
+  <dd> {{name+age}}</dd>
+
+  <td>Capitalizado:</td>
+  <dd> {{ capitalizName }}</dd>
+
+</dl>
+
+<!-- ngIf propio de Angular  false/null/undifined serían lo mismo -->
+<button
+  *ngIf="name !== 'OtroSuperHero'"
+  (click)="changHero()">
+  Cambiar name
+</button>
+
+<button
+  *ngIf="age !== 25"
+  (click)="changAge()">
+  Cambiar edad
+</button>
